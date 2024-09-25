@@ -68,6 +68,6 @@ UI Specialist: Robert Ballou and Taka Kiuchi <br>
 Business Logic / Persistence: Edward Barch and Fatuma Abdullahi
 
 ## Project Link
-https://github.com/gormlyja/FundraiserManager/projects/1
+(Task)
 
 <br><br>*As a group, we have decided to meet Wednesday at 7PM using teams.*
