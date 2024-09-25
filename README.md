@@ -1,45 +1,46 @@
-# Fundraiser Manager
+# Weekly Fitness Tracker
 
 ## Introduction
 
-For the IT4045 Final Project, our group decided to make a fundraiser manager. The fundraiser manager allows organizers to set up an online space for their fundraiser. This allows any participants the ability to see information about a fundraiser, compare how much they have sold compared to other participants, and see if / how many rewards they qualify    for from the organizers. Organizers are able to edit information about their fundraiser, establish rewards / reward tiers, and edit members and member information.
+For the IT4045 Final Project, our group has developed the Weekly-Fitness-Tracker application. This app is designed to help users monitor their physical activity and set weekly fitness goals, offering an intuitive way to track workouts and maintain a consistent exercise routine. The Weekly-Fitness-Tracker allows users to log their exercises, including workout type, duration, intensity, and calories burned, while setting personal goals on a weekly basis. It provides visual progress charts, helping users stay motivated and adjust their fitness routines as needed. The app also offers personalized fitness tips and reminders to help users stay on track with their weekly goals.
  
 ## Storyboard
-[Storyboard link](https://projects.invisionapp.com/prototype/ckz1rgk2l001sz5011jn42gmr/play)
+[Storyboard link] (TASK)
  
 ## Requirements
- As a user, I want to be able to see information about a fundraiser so that I can compare how much they have sold compared to other participants and see if / how many rewards they qualify for from the organizers. 
+ As a user, I want to be able to see information about my fitness progress so that I can compare my weekly activity and achievements to other participants and track how close I am to reaching my fitness goals or rewards 
+ set by the app. 
  
- Example 1 
-<br>Given: A feed of fundraiser data are available 
-<br>When: The user searches for a particular fundraiser (recognizable name)
-<br>Then: The fundraiser app will return any results and save in view list
+ Example 1: View Weekly Fitness Statistics
+<br>Given: A user has successfully logged workouts and fitness data for the current week.
+<br>When: The user navigates to the "Weekly Progress" page.
+<br>Then: The Weekly-Fitness-Tracker app will display the user's workout data (e.g., number of workouts, duration, calories burned) and compare it to the weekly goals set by the user.
 
 
-Example 2 
-<br>Given: Fundraiser data available 
-<br>When: The user searches for “aaofdnoas” (not recognizable text)
-<br>Then: The fundraiser app will not return any results and not save in view list 
+ Example 2: View Reward Progress and Eligibility
+<br>Given: The app tracks user progress towards various fitness rewards (e.g., completing a certain number of workouts, calories burned, steps taken).
+<br>When: The user navigates to the "Rewards" page.
+<br>Then: The app will display the user’s progress towards each reward, including a list of earned rewards and a progress bar or percentage for unachieved rewards.
 
 
-Example 3 
-<br>Given: The fundraiser app saved user’s searched fundraiser  
-When: The User clicks and views the fundraiser
-<br>Then: The user will see how much they have sold compared to other participants
+ Example 3: Custom Regiment
+<br>Given:Custom Regiment  
+<br>When: Users inputs custom regiment 
+<br>Then: App returns a table with the regiment
 
 
-Example 4 
-<br>Given: The fundraiser app saved user’s searched fundraiser  
-When: The User clicks and views the fundraiser
-<br>Then: The user will see how many rewards they qualify for from the organizers
+ Example 4: Handle No Data Logged
+<br>Given: The user has not logged any fitness data or workouts for the current week.
+<br>When: The user tries to view their weekly progress or leaderboard status.
+<br>Then: The app will display a message stating "No data available. Please log your workouts to track progress," and no further data will be shown until valid data is logged.
 
 
-Example 5 
-<br>Given: The user has previous fundraisers in the view list 
-<br>When: Some of the previous fundraisers have expired 
-<br>Then: The user can select expired fundraiser and click delete button to remove from the view list.  
+ Example 5: Viewing Current Workout Regimen
+<br>Given: The user has logged into the Weekly-Fitness-Tracker app and has a defined workout regimen.
+<br>When: The user navigates to the "Current Workout Regimen" section of the app.
+<br>Then: The app will display the user's current workout plan, including the types of exercises, scheduled days, durations, and any specific goals for each workout. The user should also see any notes or recommendations related to the workout regimen, such as suggested warm-up exercises or cooldown stretches.  
 ## Class Diagram
- ![Class Diagram](https://github.com/gormlyja/FundraiserManager/blob/main/Capture.JPG)
+ ![Class Diagram] (TASK)
  
 ### Class Diagram Description
 IFundraiserEntryService - Interface declaring all necessary methods for FundraiserEntry related functionality.
@@ -62,11 +63,11 @@ This is what we plan to export to another app.
  
 ## Roles
  
-Devops/Product Owner/Scrum Master/GitHub Admin: Jacob Gormly <br>
-UI Specialist: Rahul Shakya and Binod Dahl <br>
-Business Logic / Persistence: Amin Vedant and Juan Lopez Rosado
+Devops/Product Owner/Scrum Master/GitHub Admin: Melanie Peck <br>
+UI Specialist: Robert Ballou and Taka Kiuchi <br>
+Business Logic / Persistence: Edward Barch and Fatuma Abdullahi
 
 ## Project Link
 https://github.com/gormlyja/FundraiserManager/projects/1
 
-<br><br>*As a group, we have decided to meet Mondays at 6PM using Discord.*
+<br><br>*As a group, we have decided to meet Wednesday at 7PM using teams.*
