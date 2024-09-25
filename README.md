@@ -53,13 +53,15 @@ IFundraiserEntryService - Interface declaring all necessary methods for Fundrais
 This is what we plan to export to another app.
 
 >{
->    "fundraiser": {
+>    "Workout": {
 >        "id": "123456",
->        "title": "Girl Scout Cookie Sale",
->        "username": "sampleusername",
->        "description": "Fundraiser description",
->        "imageURL": "Sample URL"
->    }}
+>        "title": "Push day",
+>        "exercises": 5
+>        "sets": "15",
+>        "reps": "150",
+>        "caloriesBurned": "500"
+>    }
+>}
  
 ## Roles
  
