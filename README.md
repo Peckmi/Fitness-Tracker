@@ -55,10 +55,10 @@ This is what we plan to export to another app.
 >{
 >    "Workout": {
 >        "id": "123456",
->        "title": "Push day",
->        "exercises": 5
->        "sets": "15",
->        "reps": "150",
+>        "userID": "1",
+>        "type": "strength",
+>        "duration": "60"
+>        "intensity": "high",
 >        "caloriesBurned": "500"
 >    }
 >}
