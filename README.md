@@ -69,6 +69,10 @@ Devops/Product Owner/Scrum Master/GitHub Admin: Melanie Peck <br>
 UI Specialist: Robert Ballou and Taka Kiuchi <br>
 Business Logic / Persistence: Edward Barch and Fatuma Abdullahi
 
+## Milestones
+
+[Milestone 1](https://github.com/Peckmi/Weekly-Fitness-Tracker/milestone/1)
+
 ## Project Link
 (Task)
 
