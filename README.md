@@ -72,6 +72,7 @@ Business Logic / Persistence: Edward Barch and Fatuma Abdullahi
 ## Milestones
 
 [Milestone 1](https://github.com/Peckmi/Weekly-Fitness-Tracker/milestone/1)
+//Week 3 - Week 6
 
 ## Project Link
 (Task)
