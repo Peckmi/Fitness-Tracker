@@ -5,7 +5,7 @@
 For the IT4045 Final Project, our group has developed the Weekly-Fitness-Tracker application. This app is designed to help users monitor their physical activity and set weekly fitness goals, offering an intuitive way to track workouts and maintain a consistent exercise routine. The Weekly-Fitness-Tracker allows users to log their exercises, including workout type, duration, intensity, and calories burned, while setting personal goals on a weekly basis. It provides visual progress charts, helping users stay motivated and adjust their fitness routines as needed. The app also offers personalized fitness tips and reminders to help users stay on track with their weekly goals.
  
 ## Storyboard
-[Storyboard link] (TASK)
+[[Storyboard link]](https://mailuc-my.sharepoint.com/:p:/g/personal/ballourl_mail_uc_edu/EV0XSMZkicpDkJzxgqcNEWABZCbFEtgOVeRBJX8dfnG5cA?e=J7mana) (TASK)
  
 ## Requirements
  As a user, I want to be able to see information about my fitness progress so that I can compare my weekly activity and achievements to other participants and track how close I am to reaching my fitness goals or rewards 
