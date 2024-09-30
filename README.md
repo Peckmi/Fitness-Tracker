@@ -5,7 +5,7 @@
 For the IT4045 Final Project, our group has developed the Weekly-Fitness-Tracker application. This app is designed to help users monitor their physical activity and set weekly fitness goals, offering an intuitive way to track workouts and maintain a consistent exercise routine. The Weekly-Fitness-Tracker allows users to log their exercises, including workout type, duration, intensity, and calories burned, while setting personal goals on a weekly basis. It provides visual progress charts, helping users stay motivated and adjust their fitness routines as needed. The app also offers personalized fitness tips and reminders to help users stay on track with their weekly goals.
  
 ## Storyboard
-[[Storyboard link]](https://mailuc-my.sharepoint.com/:p:/g/personal/ballourl_mail_uc_edu/EV0XSMZkicpDkJzxgqcNEWABZCbFEtgOVeRBJX8dfnG5cA?e=J7mana) (TASK)
+[[Storyboard link]](https://mailuc-my.sharepoint.com/:p:/g/personal/ballourl_mail_uc_edu/EV0XSMZkicpDkJzxgqcNEWABZCbFEtgOVeRBJX8dfnG5cA?e=J7mana)
  
 ## Requirements
  As a user, I want to be able to see information about my fitness progress so that I can compare my weekly activity and achievements to other participants and track how close I am to reaching my fitness goals or rewards 
@@ -40,15 +40,16 @@ For the IT4045 Final Project, our group has developed the Weekly-Fitness-Tracker
 <br>When: The user navigates to the "Current Workout Regimen" section of the app.
 <br>Then: The app will display the user's current workout plan, including the types of exercises, scheduled days, durations, and any specific goals for each workout. The user should also see any notes or recommendations related to the workout regimen, such as suggested warm-up exercises or cooldown stretches.  
 ## Class Diagram
- ![Class Diagram] (TASK)
+ ![Class Diagram](https://github.com/Peckmi/Weekly-Fitness-Tracker/blob/main/class%20diagram.png)
  
 ### Class Diagram Description
-IFundraiserEntryService - Interface declaring all necessary methods for FundraiserEntry related functionality.
-<br>FundraiserEntryService - Contains implementation for all mentods in IFundraiserEntryService
-<br>FundraiserEntryServiceStub - Implements IFundraiserEntryService's methods with hardcoded return values for initial ui development
-<br>FundraiserEntry - carries FundraiserEntry data between processes
-<br>IFundraiserEntryDAO - Interface declaring the methods needed for FundraiserEntry's data access object
-<br>FundraiserEntryDAO - Implements IFundraiserEntryDAO allowing access to FundraiserEntry records in the database
+User - Contains all of the information for the current user as well as functions for all of the actions they can complete
+<br>ProgressChart - Contains all the information that will be used to display the users progress chart as well as the functions themselves to display the chart and compare their progress to their goals
+<br>WeeklyGoal - Contains all of the information for the users weekly goal as well as functions for updating it and checking its completion
+<br>Workout - Contains all of the information for a workout and functions to log one and calculate calories burned
+<br>Reward - Contains all of the information for a reward and a function to see if the user is eligible for it
+<br>WorkoutRegimen - Contains all of the infomation for a workout regimen as well as functions to view and edit it
+<br>Excercise - Contains all of the information for a single excercise and functions to add or remove it to a regimen
 ## JSON Schema
 This is what we plan to export to another app.
 
