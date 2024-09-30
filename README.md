@@ -60,7 +60,8 @@ This is what we plan to export to another app.
 >        "type": "strength",
 >        "duration": "60"
 >        "intensity": "high",
->        "caloriesBurned": "500"
+>        "caloriesBurned": "500",
+>        "date": "9/29/24"
 >    }
 >}
  
