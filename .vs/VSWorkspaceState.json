@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\com",
+    "\\src\\main\\java\\com\\exercisenow",
+    "\\src\\main\\java\\com\\exercisenow\\enterprise",
+    "\\src\\main\\java\\com\\exercisenow\\enterprise\\dto",
+    "\\src\\main\\resources"
+  ],
+  "SelectedNode": "\\src\\main\\java\\com\\exercisenow\\enterprise\\dto\\Exercise.class",
+  "PreviewInSolutionExplorer": false
+}

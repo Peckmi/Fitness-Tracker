@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: #ffffff;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar-logo {
+    padding: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-item {
+    margin: 10px 0;
+}
+
+.sidebar-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar-link:hover {
+    background-color: #495057;
+}
+
+.sidebar-header {
+    padding: 15px;
+    font-weight: bold;
+}
+
+.main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.workout-icon {
+    width: 80px;        /* Set a fixed width */
+    height: 80px;       /* Set a fixed height */
+    object-fit: cover;  /* Maintain aspect ratio while covering the area */
+    margin: 20px auto;  /* Center the image horizontally */
+    display: block;     /* Ensure the image behaves as a block element */
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.workout-icon {
+  width: 300px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensure the image covers the area */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth transition for transform and opacity */
+}
+
+.workout-icon:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover */
+  opacity: 0.9; /* Optionally reduce opacity to give a fade effect */
+}
+
+/* General styles for the awards page */
+body {
+  background-color: #f8f9fa; /* Optional: set a background color for better contrast */
+}
+
+.award-item {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px; /* Space between awards */
+  padding: 10px; /* Padding around each item */
+  background-color: #ffffff; /* Background color for award items */
+  border: 1px solid #ddd; /* Light border around items */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.award-photo {
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  margin-right: 15px; /* Space between image and text */
+  object-fit: cover; /* Ensure the image covers its area without distortion */
+}
+
+.award-title {
+  margin: 0; /* Remove default margin */
+  font-size: 1.25em; /* Slightly larger font size for title */
+}
+
+.award-description {
+  margin: 0; /* Remove default margin */
+  font-size: 0.9em; /* Smaller font for description */
+}
+
+.award-date {
+  display: block; /* Show date in a new line */
+  font-size: 0.8em; /* Smaller font for date */
+  color: #666; /* Gray color for the date */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .award-item {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to start */
+  }
+  .award-photo {
+    margin-bottom: 10px; /* Add space below image */
+  }
+}
+
