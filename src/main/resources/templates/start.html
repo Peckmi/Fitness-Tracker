@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
-
-  <title>Exercise Now</title>
+  <title>Fitness Tracker - Start Page</title>
 </head>
 <body>
-
 <div class="d-flex">
   <aside id="sidebar">
     <div class="sidebar-logo">
       <a href="start.html">ExerciseNow</a>
     </div>
     <ul class="sidebar-nav p-0">
-      <li class="sidebar-header">
-        Menu
-      </li>
+      <li class="sidebar-header">Menu</li>
       <li class="sidebar-item">
         <a href="start.html" class="sidebar-link">
           <i class="lni lni-home-2"></i>
@@ -62,8 +58,7 @@
       </li>
     </ul>
     <div class="sidebar-footer">
-      <a href="#" class="sidebar-link">
-      </a>
+      <a href="#" class="sidebar-link"></a>
     </div>
   </aside>
 
@@ -73,13 +68,46 @@
         <i class="lni lni-menu-cheesburger"></i>
       </button>
     </nav>
+    <main class="p-3">
+      <h1>Welcome to ExerciseNow!</h1>
+      <h2>Choose Your Workout</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../images/workout1.jpg" class="card-img-top workout-icon workout-zoom-out" alt="Full Body Workout">
+            <div class="card-body">
+              <h5 class="card-title">Full Body Workout</h5>
+              <p class="card-text">A comprehensive workout for total body strength.</p>
+              <a href="#" class="btn btn-primary">Start Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../images/workout2.jpg" class="card-img-top workout-icon workout-zoom-out" alt="Cardio Blast">
+            <div class="card-body">
+              <h5 class="card-title">Cardio Blast</h5>
+              <p class="card-text">Get your heart rate up with this intense cardio routine.</p>
+              <a href="#" class="btn btn-primary">Start Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../images/workout3.jpg" class="card-img-top workout-icon" alt="Strength Training">
+            <div class="card-body">
+              <h5 class="card-title">Strength Training</h5>
+              <p class="card-text">Build muscle with our targeted strength exercises.</p>
+              <a href="#" class="btn btn-primary">Start Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 </div>
 
-
-
-<script src ="script.js"></script>
+<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
