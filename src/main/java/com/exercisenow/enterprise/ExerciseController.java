@@ -1,32 +1,33 @@
 package com.exercisenow.enterprise;
 
 import com.exercisenow.enterprise.dto.User;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ExerciseController {
 
     @RequestMapping("/")
+        public String index() {
         User user = new User();
-
-    public string index() {
         return "start";
     }
 
+    @GetMapping("/user/{id}/")
+    public ResponseEntity fetchUserByUserId(@PathVariable("userId") String id) {
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @PostMapping(value="/user/{id}", consumes="application/json", produces="application/json")
+    public User createUser(@RequestBody User user){
+        return user;
+    }
+
+    @DeleteMapping("/user/{id}/")
+    public ResponseEntity deleteUser(@PathVariable("id") String id){
+        return new ResponseEntity(HttpStatus.OK);
+    }
 }
 
-@GetMapping("/user/{id}/")
-public ResponseEntity fetchUserByUserId(@PathVariable"userId") String id) {
-    return new ResponseEntity(HttpStatus.OK);
-}
-
-@PostMapping(value="/user/{id}", consumes="application/json", produces="application/json")
-public User createUser(@RequestBody User user){
-    return user;
-}
-
-@DeleteMapping("/user/{id}/")
-public ResponseEntity deleteUser(@PathVariable("id") String id){
-    return new ResponseEntity(HttpStatus.Ok);
-}
