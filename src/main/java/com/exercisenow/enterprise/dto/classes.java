@@ -238,6 +238,16 @@ class WeeklyGoal {
         this.progressPercentage = 0;
     }
 
+    public void updateProgress(double calories) {
+        currentCalories += calories;
+        calculateProgressPercentage();
+    }
+
+    private void calculateProgressPercentage() {
+        progressPercentage = (currentCalories / targetCalories) * 100;
+    }
+
+
     // Getters and Setters
     public int getGoalID() {
         return goalID;
@@ -440,10 +450,10 @@ class Exercise {
 class Reward {
     private int rewardID;
     private String description;
-    private String goalToAchieve;
+    p
 
-    public Reward(int rewardID, String description, String goalToAchieve) {
-        this.rewardID = rewardID;
+
+
         this.description = description;
         this.goalToAchieve = goalToAchieve;
     }
