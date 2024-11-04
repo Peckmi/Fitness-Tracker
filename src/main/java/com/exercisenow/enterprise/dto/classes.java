@@ -441,14 +441,18 @@ class Reward {
     private int rewardID;
     private String description;
     private String goalToAchieve;
-    private double progressPercentage;
 
     public Reward(int rewardID, String description, String goalToAchieve) {
         this.rewardID = rewardID;
         this.description = description;
         this.goalToAchieve = goalToAchieve;
-        this.progressPercentage = 0;
     }
+
+    public double calculateProgressPercentage(double currentProgress, double goal) {
+        return (currentProgress / goal) * 100;
+    }
+}
+
 
     // Getters and Setters
     public int getRewardID() {
