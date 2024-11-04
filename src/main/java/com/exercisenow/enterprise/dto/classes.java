@@ -221,10 +221,10 @@ class WeeklyGoal {
     private double targetCalories;
     private int targetWorkouts;
     private double targetDuration;
-    private double currentCalories;
-    private int currentWorkouts;
-    private double currentDuration;
-    private double progressPercentage;
+    private double currentCalories = 0;  // Initialized directly
+    private int currentWorkouts = 0;     // Initialized directly
+    private double currentDuration = 0;  // Initialized directly
+    private double progressPercentage = 0;  // Initialized directly
 
     public WeeklyGoal(int goalID, int userID, double targetCalories, int targetWorkouts, double targetDuration) {
         this.goalID = goalID;
@@ -232,11 +232,9 @@ class WeeklyGoal {
         this.targetCalories = targetCalories;
         this.targetWorkouts = targetWorkouts;
         this.targetDuration = targetDuration;
-        this.currentCalories = 0;
-        this.currentWorkouts = 0;
-        this.currentDuration = 0;
-        this.progressPercentage = 0;
     }
+}
+
 
     public void updateProgress(double calories) {
         currentCalories += calories;
@@ -248,8 +246,7 @@ class WeeklyGoal {
     }
 
 
-    // Getters and Setters
-    public int getGoalID() {
+
         return goalID;
     }
 
@@ -453,19 +450,15 @@ class Reward {
     p
 
 
-
-        this.description = description;
-        this.goalToAchieve = goalToAchieve;
-    }
-
+    
     public double calculateProgressPercentage(double currentProgress, double goal) {
         return (currentProgress / goal) * 100;
     }
 }
 
 
-    // Getters and Setters
-    public int getRewardID() {
+
+
         return rewardID;
     }
 
