@@ -84,6 +84,7 @@ Business Logic / Persistence: Edward Barch and Fatuma Abdullahi
 
 ## Project Links
 [Project 1](https://github.com/users/Peckmi/projects/4)
+<br>
 [Project 2](https://github.com/users/Peckmi/projects/5)
 
 <br><br>*As a group, we have decided to meet Wednesday at 7PM using teams.*
