@@ -28,33 +28,77 @@ class User {
     }
 
     // Getters and Setters
-    public int getUserID() { return userID; }
-    public void setUserID(int userID) { this.userID = userID; }
+    public int getUserID() {
+        return userID;
+    }
 
-    public String getUsername() { return username; }
-    public void setUsername(String username) { this.username = username; }
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getUsername() {
+        return username;
+    }
 
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-    public int getAge() { return age; }
-    public void setAge(int age) { this.age = age; }
+    public String getEmail() {
+        return email;
+    }
 
-    public double getWeight() { return weight; }
-    public void setWeight(double weight) { this.weight = weight; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-    public double getHeight() { return height; }
-    public void setHeight(double height) { this.height = height; }
+    public String getPassword() {
+        return password;
+    }
 
-    public List<WeeklyGoal> getWeeklyGoals() { return weeklyGoals; }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-    public WorkoutRegimen getCurrentRegimen() { return currentRegimen; }
-    public void setCurrentRegimen(WorkoutRegimen currentRegimen) { this.currentRegimen = currentRegimen; }
+    public int getAge() {
+        return age;
+    }
 
-    public List<Reward> getRewards() { return rewards; }
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public List<WeeklyGoal> getWeeklyGoals() {
+        return weeklyGoals;
+    }
+
+    public WorkoutRegimen getCurrentRegimen() {
+        return currentRegimen;
+    }
+
+    public void setCurrentRegimen(WorkoutRegimen currentRegimen) {
+        this.currentRegimen = currentRegimen;
+    }
+
+    public List<Reward> getRewards() {
+        return rewards;
+    }
 
     public void login() {
         // Implementation for user login
@@ -93,7 +137,8 @@ class Workout {
     private double caloriesBurned;
     private Date date;
 
-    public Workout(int workoutID, int userID, String type, double duration, String intensity, double caloriesBurned, Date date) {
+    public Workout(int workoutID, int userID, String type, double duration, String intensity, double caloriesBurned,
+            Date date) {
         this.workoutID = workoutID;
         this.userID = userID;
         this.type = type;
@@ -104,26 +149,61 @@ class Workout {
     }
 
     // Getters and Setters
-    public int getWorkoutID() { return workoutID; }
-    public void setWorkoutID(int workoutID) { this.workoutID = workoutID; }
+    public int getWorkoutID() {
+        return workoutID;
+    }
 
-    public int getUserID() { return userID; }
-    public void setUserID(int userID) { this.userID = userID; }
+    public void setWorkoutID(int workoutID) {
+        this.workoutID = workoutID;
+    }
 
-    public String getType() { return type; }
-    public void setType(String type) { this.type = type; }
+    public int getUserID() {
+        return userID;
+    }
 
-    public double getDuration() { return duration; }
-    public void setDuration(double duration) { this.duration = duration; }
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
-    public String getIntensity() { return intensity; }
-    public void setIntensity(String intensity) { this.intensity = intensity; }
+    public String getType() {
+        return type;
+    }
 
-    public double getCaloriesBurned() { return caloriesBurned; }
-    public void setCaloriesBurned(double caloriesBurned) { this.caloriesBurned = caloriesBurned; }
+    public void setType(String type) {
+        this.type = type;
+    }
 
-    public Date getDate() { return date; }
-    public void setDate(Date date) { this.date = date; }
+    public double getDuration() {
+        return duration;
+    }
+
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
+
+    public String getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(String intensity) {
+        this.intensity = intensity;
+    }
+
+    public double getCaloriesBurned() {
+        return caloriesBurned;
+    }
+
+    public void setCaloriesBurned(double caloriesBurned) {
+        this.caloriesBurned = caloriesBurned;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public void logWorkout() {
         // Implementation for logging workout
@@ -141,10 +221,10 @@ class WeeklyGoal {
     private double targetCalories;
     private int targetWorkouts;
     private double targetDuration;
-    private double currentCalories;
-    private int currentWorkouts;
-    private double currentDuration;
-    private double progressPercentage;
+    private double currentCalories = 0;  // Initialized directly
+    private int currentWorkouts = 0;     // Initialized directly
+    private double currentDuration = 0;  // Initialized directly
+    private double progressPercentage = 0;  // Initialized directly
 
     public WeeklyGoal(int goalID, int userID, double targetCalories, int targetWorkouts, double targetDuration) {
         this.goalID = goalID;
@@ -152,35 +232,75 @@ class WeeklyGoal {
         this.targetCalories = targetCalories;
         this.targetWorkouts = targetWorkouts;
         this.targetDuration = targetDuration;
-        this.currentCalories = 0;
-        this.currentWorkouts = 0;
-        this.currentDuration = 0;
-        this.progressPercentage = 0;
+    }
+}
+
+
+    public void updateProgress(double calories) {
+        currentCalories += calories;
+        calculateProgressPercentage();
     }
 
-    // Getters and Setters
-    public int getGoalID() { return goalID; }
-    public void setGoalID(int goalID) { this.goalID = goalID; }
+    private void calculateProgressPercentage() {
+        progressPercentage = (currentCalories / targetCalories) * 100;
+    }
 
-    public int getUserID() { return userID; }
-    public void setUserID(int userID) { this.userID = userID; }
 
-    public double getTargetCalories() { return targetCalories; }
-    public void setTargetCalories(double targetCalories) { this.targetCalories = targetCalories; }
 
-    public int getTargetWorkouts() { return targetWorkouts; }
-    public void setTargetWorkouts(int targetWorkouts) { this.targetWorkouts = targetWorkouts; }
+        return goalID;
+    }
 
-    public double getTargetDuration() { return targetDuration; }
-    public void setTargetDuration(double targetDuration) { this.targetDuration = targetDuration; }
+    public void setGoalID(int goalID) {
+        this.goalID = goalID;
+    }
 
-    public double getCurrentCalories() { return currentCalories; }
+    public int getUserID() {
+        return userID;
+    }
 
-    public int getCurrentWorkouts() { return currentWorkouts; }
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
-    public double getCurrentDuration() { return currentDuration; }
+    public double getTargetCalories() {
+        return targetCalories;
+    }
 
-    public double getProgressPercentage() { return progressPercentage; }
+    public void setTargetCalories(double targetCalories) {
+        this.targetCalories = targetCalories;
+    }
+
+    public int getTargetWorkouts() {
+        return targetWorkouts;
+    }
+
+    public void setTargetWorkouts(int targetWorkouts) {
+        this.targetWorkouts = targetWorkouts;
+    }
+
+    public double getTargetDuration() {
+        return targetDuration;
+    }
+
+    public void setTargetDuration(double targetDuration) {
+        this.targetDuration = targetDuration;
+    }
+
+    public double getCurrentCalories() {
+        return currentCalories;
+    }
+
+    public int getCurrentWorkouts() {
+        return currentWorkouts;
+    }
+
+    public double getCurrentDuration() {
+        return currentDuration;
+    }
+
+    public double getProgressPercentage() {
+        return progressPercentage;
+    }
 
     public void updateProgress(double calories, int workouts, double duration) {
         currentCalories += calories;
@@ -212,18 +332,37 @@ class WorkoutRegimen {
     }
 
     // Getters and Setters
-    public int getRegimenID() { return regimenID; }
-    public void setRegimenID(int regimenID) { this.regimenID = regimenID; }
+    public int getRegimenID() {
+        return regimenID;
+    }
 
-    public int getUserID() { return userID; }
-    public void setUserID(int userID) { this.userID = userID; }
+    public void setRegimenID(int regimenID) {
+        this.regimenID = regimenID;
+    }
 
-    public List<Workout> getExercises() { return exercises; }
+    public int getUserID() {
+        return userID;
+    }
 
-    public String[] getSchedule() { return schedule; }
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
-    public String getNotes() { return notes; }
-    public void setNotes(String notes) { this.notes = notes; }
+    public List<Workout> getExercises() {
+        return exercises;
+    }
+
+    public String[] getSchedule() {
+        return schedule;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
 
     public void addExercise(Workout workout) {
         exercises.add(workout);
@@ -255,20 +394,45 @@ class Exercise {
     }
 
     // Getters and Setters
-    public int getExerciseID() { return exerciseID; }
-    public void setExerciseID(int exerciseID) { this.exerciseID = exerciseID; }
+    public int getExerciseID() {
+        return exerciseID;
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public void setExerciseID(int exerciseID) {
+        this.exerciseID = exerciseID;
+    }
 
-    public String getType() { return type; }
-    public void setType(String type) { this.type = type; }
+    public String getName() {
+        return name;
+    }
 
-    public double getDuration() { return duration; }
-    public void setDuration(double duration) { this.duration = duration; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public double getGoalCaloriesBurned() { return goalCaloriesBurned; }
-    public void setGoalCaloriesBurned(double goalCaloriesBurned) { this.goalCaloriesBurned = goalCaloriesBurned; }
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
+
+    public double getGoalCaloriesBurned() {
+        return goalCaloriesBurned;
+    }
+
+    public void setGoalCaloriesBurned(double goalCaloriesBurned) {
+        this.goalCaloriesBurned = goalCaloriesBurned;
+    }
 
     public void addToRegimen(WorkoutRegimen regimen) {
         // Implementation to add exercise to regimen
@@ -283,27 +447,44 @@ class Exercise {
 class Reward {
     private int rewardID;
     private String description;
-    private String goalToAchieve;
-    private double progressPercentage;
+    p
 
-    public Reward(int rewardID, String description, String goalToAchieve) {
-        this.rewardID = rewardID;
-        this.description = description;
-        this.goalToAchieve = goalToAchieve;
-        this.progressPercentage = 0;
+
+    
+    public double calculateProgressPercentage(double currentProgress, double goal) {
+        return (currentProgress / goal) * 100;
+    }
+}
+
+
+
+
+        return rewardID;
     }
 
-    // Getters and Setters
-    public int getRewardID() { return rewardID; }
-    public void setRewardID(int rewardID) { this.rewardID = rewardID; }
+    public void setRewardID(int rewardID) {
+        this.rewardID = rewardID;
+    }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public String getDescription() {
+        return description;
+    }
 
-    public String getGoalToAchieve() { return goalToAchieve; }
-    public void setGoalToAchieve(String goalToAchieve) { this.goalToAchieve = goalToAchieve; }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-    public double getProgressPercentage() { return progressPercentage; }
+    public String getGoalToAchieve() {
+        return goalToAchieve;
+    }
+
+    public void setGoalToAchieve(String goalToAchieve) {
+        this.goalToAchieve = goalToAchieve;
+    }
+
+    public double getProgressPercentage() {
+        return progressPercentage;
+    }
 
     public void checkRewardEligibility() {
         // Implementation to check eligibility for the reward
@@ -325,15 +506,29 @@ class ProgressChart {
     }
 
     // Getters and Setters
-    public int getChartID() { return chartID; }
-    public void setChartID(int chartID) { this.chartID = chartID; }
+    public int getChartID() {
+        return chartID;
+    }
 
-    public int getUserID() { return userID; }
-    public void setUserID(int userID) { this.userID = userID; }
+    public void setChartID(int chartID) {
+        this.chartID = chartID;
+    }
 
-    public List<Workout> getWeeklyData() { return weeklyData; }
+    public int getUserID() {
+        return userID;
+    }
 
-    public List<WeeklyGoal> getGoalData() { return goalData; }
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
+    public List<Workout> getWeeklyData() {
+        return weeklyData;
+    }
+
+    public List<WeeklyGoal> getGoalData() {
+        return goalData;
+    }
 
     public void generateChart() {
         // Implementation to generate a progress chart
