@@ -1,3 +1,5 @@
+package src.main.java.com.exercisenow.enterprise.dto;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
