@@ -17,8 +17,8 @@ public class ExerciseController {
 }
 
 @GetMapping("/user/{id}/")
-public ResponseEntity fetchUserByUserId(@PathVariable"userId") String id) {
-    return new ResponseEntity(HttpStatus.OK);
+public ResponseEntity<User> fetchUserByUserId(@PathVariable("userId") String id) {
+    return new ResponseEntity<>(HttpStatus.OK);
 }
 
 @PostMapping(value="/user/{id}", consumes="application/json", produces="application/json")
@@ -27,6 +27,6 @@ public User createUser(@RequestBody User user){
 }
 
 @DeleteMapping("/user/{id}/")
-public ResponseEntity deleteUser(@PathVariable("id") String id){
+public ResponseEntity<User> deleteUser(@PathVariable("id") String id){
     return new ResponseEntity(HttpStatus.Ok);
 }
