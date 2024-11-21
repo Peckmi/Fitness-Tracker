@@ -32,13 +32,9 @@ class WeeklyGoal {
         durationPercentage = (totalDuration / targetDuration) * 100;
     }
 
-    public void addWorkout(Workout workout) {
-        currentWorkouts.add(workout);
-    }
+    public void addWorkout(Workout workout) { currentWorkouts.add(workout); }
 
-    public void removeWorkout(Workout workout) {
-        currentWorkouts.remove(workout);
-    }
+    public void removeWorkout(Workout workout) { currentWorkouts.remove(workout); }
 
     public void generateProgressChart() {
         // Implementation to generate a progress chart

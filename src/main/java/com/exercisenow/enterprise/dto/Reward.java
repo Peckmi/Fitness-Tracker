@@ -9,7 +9,5 @@ class Reward {
     private String goalToAchieve;
     private double requiredProgress;
 
-    public Boolean checkRewardEligibility(double progress) {
-        return progress >= requiredProgress;
-    }
+    public Boolean checkRewardEligibility(double progress) { return progress >= requiredProgress; }
 }

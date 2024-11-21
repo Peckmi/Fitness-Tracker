@@ -17,11 +17,7 @@ class Workout {
     private Date date;
     private List<Exercise> exercises;
 
-    public void addExercise(Exercise exercise) {
-        exercises.add(exercise);
-    }
+    public void addExercise(Exercise exercise) { exercises.add(exercise); }
 
-    public void removeExercise(Exercise exercise) {
-        exercises.remove(exercise);
-    }
+    public void removeExercise(Exercise exercise) { exercises.remove(exercise); }
 }
