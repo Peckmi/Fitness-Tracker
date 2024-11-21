@@ -9,12 +9,4 @@ class Exercise {
     private String type; // e.g., cardio, strength
     private double duration; // in minutes
     private double goalCaloriesBurned;
-
-    public void addToRegimen(WorkoutRegimen regimen) {
-        // Implementation to add exercise to regimen
-    }
-
-    public void removeFromRegimen(WorkoutRegimen regimen) {
-        // Implementation to remove exercise from regimen
-    }
 }

@@ -3,6 +3,7 @@ package com.exercisenow.enterprise.dto;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 public @Data
 class Workout {
@@ -12,13 +13,15 @@ class Workout {
     private double duration; // in minutes
     private String intensity;
     private double caloriesBurned;
+    private String weekday;
     private Date date;
+    private List<Exercise> exercises;
 
-    public void logWorkout() {
-        // Implementation for logging workout
+    public void addExercise(Exercise exercise) {
+        exercises.add(exercise);
     }
 
-    public void calculateCalories() {
-        // Implementation for calculating calories burned
+    public void removeExercise(Exercise exercise) {
+        exercises.remove(exercise);
     }
 }

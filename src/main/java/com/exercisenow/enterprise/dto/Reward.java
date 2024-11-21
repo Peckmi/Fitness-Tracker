@@ -7,9 +7,9 @@ class Reward {
     private int rewardID;
     private String description;
     private String goalToAchieve;
-    private double progressPercentage;
+    private double requiredProgress;
 
-    public void checkRewardEligibility() {
-        // Implementation to check eligibility for the reward
+    public Boolean checkRewardEligibility(double progress) {
+        return progress >= requiredProgress;
     }
 }
