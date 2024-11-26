@@ -8,9 +8,9 @@ import java.sql.SQLException;
 public class DataConnection {
     public static void main(String[] args) {
         
-        String url = "jdbc:mysql://localhost:3306/exercise_now";
+        String url = "jdbc:mysql://localhost:3306/fitnesstracker";
         String username = "root";
-        String password = "DataBase1!";
+        String password = "Database1!";
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connected to the database");

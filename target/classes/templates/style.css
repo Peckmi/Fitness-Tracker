@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Use a consistent background color */
+    background-image: url("src/main/resources/images/background1.jpeg");
+}
+
+#sidebar {
+    width: 250px;
+    max-width: 264px;
+    min-width: 264px;
+    height: 100vh;
+    position: fixed;
+    transition: all 0.35s ease-in-out;
+    background-color: #104862;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    padding: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    flex: 1 1 auto;
+}
+
+.sidebar-item {
+    margin: 10px 0;
+}
+
+.sidebar-link {
+    color: #fbfbfb;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.35s;
+}
+
+.sidebar-link:hover {
+    background-color: #1E83B2; /* Change hover effect */
+}
+
+.sidebar-header {
+    padding: 15px;
+    font-weight: bold;
+    color: #fbfbfb;
+}
+
+.main {
+    margin-left: 250px; /* Adjust according to sidebar width */
+    padding: 20px;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.workout-icon {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure the image covers the area */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for transform and opacity */
+    margin: 20px auto; /* Center the image horizontally */
+    display: block; /* Ensure the image behaves as a block element */
+}
+
+.workout-icon:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    opacity: 0.9; /* Optionally reduce opacity for a fade effect */
+}
+
+/* General styles for the awards page */
+.awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.award-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.award-photo {
+    width: 80px; /* Set a fixed width */
+    height: 80px; /* Set a fixed height */
+    border-radius: 8px;
+    object-fit: cover; /* Ensure the image covers its area without distortion */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.award-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.award-title {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2em; /* Slightly larger font size for title */
+    font-weight: bold;
+    color: #333;
+}
+
+.award-description {
+    margin: 0; /* Remove default margin */
+    font-size: 1em; /* Normal font for description */
+    color: #666;
+}
+
+.award-date {
+    align-self: flex-end; /* Align date to the right */
+    font-size: 0.9em; /* Smaller font for date */
+    color: #999; /* Gray color for the date */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .award-item {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to start */
+    }
+    .award-photo {
+        margin-bottom: 10px; /* Add space below image */
+    }
+}
