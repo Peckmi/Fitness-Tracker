@@ -1,8 +1,6 @@
 package com.exercisenow.enterprise.dto;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -27,7 +25,9 @@ class Workout {
     private String weekday;
     @Column
     private Date date;
-    @Column private List<Exercise> exercises;
+    @Column
+    @OneToMany(mappedBy = "workout", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Exercise> exercises;
 
     public void addExercise(Exercise exercise) { exercises.add(exercise); }
 

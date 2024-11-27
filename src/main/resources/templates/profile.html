@@ -50,13 +50,13 @@
           </a>
           <ul id="auth2" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link">Create Workout</a>
+              <a href="createworkout.html" class="sidebar-link">Create Workout</a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link">View Workout</a>
+              <a href="workouts.html" class="sidebar-link">View Workout</a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link">Add Exercise</a>
+              <a href="addexercise.html" class="sidebar-link">Add Exercise</a>
             </li>
           </ul>
         </li>
@@ -75,41 +75,42 @@
       </nav>
       <main class="p-3">
             <div class="mb-3 text-center">
-              <form action="#" th:action="@{saveUser}" th:object="${user}" method="GET"><br />
+              <h1 class="text-center">User Profile</h1>
+              <form action="#" th:action="@{/user/save}" th:object="${user}" method="post">
+                <input type="hidden" th:field="*{userID}" />
                 <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="username">Username</span>
+                    <span class="input-group-text" id="username"th:field="*{username}" required>Username</span> </div>
+                  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="email" th:field="*{email}" required>Email</span>
                   </div>
                   <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </div>
                 <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="email">Email</span>
-                  </div>
-                  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                </div>
-                <div class="input-group input-group-sm mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="password">Password</span>
+                    <span class="input-group-text" id="password"th:field="*{password}" required>Password</span>
                   </div>
                   <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </div>
                 <br/>
                 <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="Age">Age</span>
+                    <span class="input-group-text" id="Age" th:field="*{age}" required>Age</span>
                   </div>
                   <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </div>
                 <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="Weight">Weight</span>
+                    <span class="input-group-text" id="Weight" th:field="*{weight}" step="0.1" required >Weight</span>
                   </div>
                   <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </div>
                 <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="height">Height (in)</span>
+                    <span class="input-group-text" id="height" th:field="*{height}">Height (in)</span>
                   </div>
                   <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </div>
