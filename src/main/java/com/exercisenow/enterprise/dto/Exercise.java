@@ -4,9 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-public @Data
 @Table(name="Exercise")
-class Exercise {
+@Data
+public class Exercise {
 
     @Id
     private int exerciseID;
@@ -18,4 +18,8 @@ class Exercise {
     private double duration; // in minutes
     @Column
     private double goalCaloriesBurned;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "workout_id")
+    private Workout workout;
 }

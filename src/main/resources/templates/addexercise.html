@@ -74,19 +74,40 @@
             </button>
         </nav>
         <main class="p-3">
-            <h1>Add Exercise</h1>
-            <form th:action="@{/workout/addexercise/{id}(id=${workoutId})}" th:object="${exercise}" method="post">
-                <label>Name:</label>
-                <input type="text" name="name" required>
-                <label>Type:</label>
-                <input type="text" name="type" required>
-                <label>Duration (minutes):</label>
-                <input type="number" name="duration" required>
-                <label>Goal Calories Burned:</label>
-                <input type="number" name="goalCaloriesBurned" required>
-                <button type="submit">Add Exercise</button>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <h1>Add Exercise to Workout</h1>
+
+                    <!-- Form to add exercise -->
+                    <form th:action="@{/workouts/addexercise/{id}(id=${workoutId})}" th:object="${exercise}" method="post" class="border p-4 rounded shadow-sm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Exercise Name:</label>
+                            <input type="text" id="name" th:field="*{name}" class="form-control" placeholder="Enter exercise name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="type" class="form-label">Type:</label>
+                            <input type="text" id="type" th:field="*{type}" class="form-control" placeholder="Cardio, Strength, etc." required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="duration" class="form-label">Duration (minutes):</label>
+                            <input type="number" id="duration" th:field="*{duration}" class="form-control" placeholder="Enter duration" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="goalCaloriesBurned" class="form-label">Goal Calories Burned:</label>
+                            <input type="number" id="goalCaloriesBurned" th:field="*{goalCaloriesBurned}" class="form-control" placeholder="Enter goal calories burned" required>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary w-100">Add Exercise</button>
+                    </form>
+                </div>
+            </div>
         </main>
     </div>
-</div>
-</body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

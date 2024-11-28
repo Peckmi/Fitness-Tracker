@@ -66,36 +66,43 @@
                 </a>
             </div>
         </aside>
-        <div>
-            <div class="main">
-                <nav class="navbar navbar-expand border-bottom">
-                    <button class="toggler-btn" type="button">
-                        <i class="lni lni-menu-cheesburger"></i>
-                    </button>
-                </nav>
+        <div class="main">
+            <nav class="navbar navbar-expand border-bottom">
+                <button class="toggler-btn" type="button">
+                    <i class="lni lni-menu-cheesburger"></i>
+                </button>
+            </nav>
+
             <h1>Workout List</h1>
-            <a href="/workouts/create">Create Workout</a>
-            <table border="1">
+            <br>
+
+            <button class="btn btn-primary">
+                <a href="/workouts/createworkout" style="color: white; text-decoration: none;">Create Workout</a>
+            </button>
+            <br>
+            <br>
+            <table class="table table-bordered">
+                <thead>
                 <tr>
                     <th>ID</th>
                     <th>Type</th>
                     <th>Duration</th>
                     <th>Intensity</th>
-                    <th>Actions</th>
                 </tr>
-                <tr th:each="workout : ${workouts}">
+                </thead>
+                <tbody>
+               <tr th:each="workout : ${workouts}">
                     <td th:text="${workout.workoutID}"></td>
                     <td th:text="${workout.type}"></td>
                     <td th:text="${workout.duration}"></td>
                     <td th:text="${workout.intensity}"></td>
-                    <td>
-                        <a th:href="@{/workouts/{id}/add-exercise(id=${workout.workoutID})}">Add Exercise</a>
-                    </td>
                 </tr>
+                </tbody>
             </table>
-            </main>
+            <button class="btn btn-secondary">
+                <a th:href="@{/workouts/{id}/addexercise(id=${workout.workoutID})}" style="color: white; text-decoration: none;">Add Exercise</a>
+            </button>
         </div>
-    </div>
     </div>
 </body>
 </html>

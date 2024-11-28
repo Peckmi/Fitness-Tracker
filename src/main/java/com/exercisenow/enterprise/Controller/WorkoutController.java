@@ -1,4 +1,4 @@
-package com.exercisenow.enterprise.controller;
+package com.exercisenow.enterprise.Controller;
 
 import com.exercisenow.enterprise.dto.Workout;
 import com.exercisenow.enterprise.service.WorkoutService;
@@ -10,30 +10,31 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/workout")
+@RequestMapping("/workouts")
 public class WorkoutController {
 
     @Autowired
     private WorkoutService workoutService;
 
-    @GetMapping("/create")
+    @GetMapping("/createworkout")
     public String showCreateWorkoutPage(Model model) {
         model.addAttribute("workout", new Workout());
         return "createworkout";
     }
 
-    @PostMapping("/create")
+    @PostMapping("/list")
     public String createWorkout(@ModelAttribute Workout workout) {
         workoutService.createWorkout(workout);
-        return "redirect:/workout/list";
+        return "redirect:/workouts/list";
     }
 
-    @GetMapping("/list")
+    @GetMapping("/")
     public String listWorkouts(Model model) {
         List<Workout> workouts = workoutService.getAllWorkouts();
         model.addAttribute("workouts", workouts);
         return "workouts";
     }
 }
+
 
 

@@ -8,9 +8,8 @@ import lombok.Data;
 
 import java.util.List;
 @Entity
-public @Data
-@Table
-class WorkoutRegimen {
+@Data
+public class WorkoutRegimen {
     @Id
     private int regimenID;
     @Column

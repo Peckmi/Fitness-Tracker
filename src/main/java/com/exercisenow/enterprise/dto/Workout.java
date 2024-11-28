@@ -6,10 +6,11 @@ import lombok.Data;
 import java.util.Date;
 import java.util.List;
 
-public @Data
-@Table
-class Workout {
+@Entity
+@Data
+public class Workout {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int workoutID;
     @Column
     private int userID;
@@ -25,7 +26,7 @@ class Workout {
     private String weekday;
     @Column
     private Date date;
-    @Column
+
     @OneToMany(mappedBy = "workout", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Exercise> exercises;
 

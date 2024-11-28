@@ -7,9 +7,9 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-public @Data
-@Table(name ="Rward")
-class Reward {
+@Data
+@Table(name ="Reward")
+public class Reward {
     @Id
     private int rewardID;
     @Column

@@ -26,6 +26,7 @@ public class ExerciseController {
     public User createUser(@RequestBody User user){
         return user;
     }
+
     @GetMapping("/add")
     public String addExerciseForm(Model model) {
         model.addAttribute("exercise", new Exercise());
