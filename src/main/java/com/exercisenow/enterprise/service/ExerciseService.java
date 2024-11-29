@@ -1,7 +1,7 @@
 package com.exercisenow.enterprise.service;
 
 import com.exercisenow.enterprise.dto.Exercise;
-import com.exercisenow.enterprise.repository.ExerciseRepository;
+import com.exercisenow.enterprise.Repository.ExerciseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
