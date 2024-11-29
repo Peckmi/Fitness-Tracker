@@ -1,8 +1,7 @@
-com\exercisenow\enterprise\dto\User.class
 com\exercisenow\enterprise\dto\Reward.class
+com\exercisenow\enterprise\dto\Workout.class
+com\exercisenow\enterprise\dto\User.class
 com\exercisenow\enterprise\dto\WeeklyGoal.class
-com\exercisenow\enterprise\ExerciseController.class
 com\exercisenow\enterprise\dto\Exercise.class
 com\exercisenow\enterprise\EnterpriseApplication.class
 com\exercisenow\enterprise\dto\WorkoutRegimen.class
-com\exercisenow\enterprise\dto\Workout.class

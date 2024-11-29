@@ -29,4 +29,9 @@ public class WorkoutService {
     public Optional<Workout> getWorkoutById(int id) {
         return workoutRepository.findById(id);
     }
+
+    public void deleteWorkoutById(int id) {
+        workoutRepository.deleteById(id);
+
+    }
 }

@@ -8,8 +8,9 @@ import lombok.Data;
 
 import java.util.List;
 @Entity
-@Data
-public class WorkoutRegimen {
+public @Data
+@Table
+class WorkoutRegimen {
     @Id
     private int regimenID;
     @Column
@@ -20,7 +21,6 @@ public class WorkoutRegimen {
     private String[] schedule;
     @Column
     private String notes;
-
     @Column
     public void addWorkout(Workout workout) {
         workouts.add(workout);
