@@ -1,11 +1,9 @@
 package com.exercisenow.enterprise.service;
 
 import com.exercisenow.enterprise.Repository.UserRepository;
+import com.exercisenow.enterprise.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.exercisenow.enterprise.dto.User;
-
-import java.util.Optional;
 
 @Service
 public class UserService {
@@ -13,16 +11,21 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User saveUser(User user) {
-        return userRepository.save(user);
+    // Save or update user
+    public void saveUser(User user) {
+        userRepository.saveUser(user);
     }
 
-    public Optional<User> getUserById(int userId) {
-        return userRepository.findById(userId);
+    // Fetch the signed-up user's details
+    public User getSingleUser() {
+        return userRepository.findSingleUser();
     }
 
-    public void deleteUser(int userId) {
-        userRepository.deleteById(userId);
+    // Delete user
+    public void deleteUser() {
+        userRepository.deleteUser();
     }
 }
+
+
 

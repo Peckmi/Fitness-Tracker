@@ -1,37 +1,31 @@
 package com.exercisenow.enterprise.service;
 
-import com.exercisenow.enterprise.dto.Workout;
 import com.exercisenow.enterprise.Repository.WorkoutRepository;
-import jakarta.transaction.Transactional;
+import com.exercisenow.enterprise.dto.Workout;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class WorkoutService {
-
     @Autowired
     private WorkoutRepository workoutRepository;
 
-    @Transactional
     public Workout createWorkout(Workout workout) {
-        return workoutRepository.save(workout);
+        return workoutRepository.saveWorkout(workout);
     }
 
-    @Transactional
     public List<Workout> getAllWorkouts() {
-        return workoutRepository.findAll();
+        return workoutRepository.getAllWorkouts();
     }
 
-    @Transactional
-    public Optional<Workout> getWorkoutById(int id) {
-        return workoutRepository.findById(id);
+    public Workout getWorkoutById(int id) {
+        return workoutRepository.getWorkoutById(id);
     }
 
     public void deleteWorkoutById(int id) {
-        workoutRepository.deleteById(id);
-
+        workoutRepository.deleteWorkoutById(id);
     }
 }
+

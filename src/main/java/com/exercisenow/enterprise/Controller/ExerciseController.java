@@ -1,43 +1,51 @@
-package com.exercisenow.enterprise.Controller;
+package com.exercisenow.enterprise.controller;
 
 import com.exercisenow.enterprise.dto.Exercise;
-import com.exercisenow.enterprise.dto.User;
-import org.springframework.http.HttpStatus;
+import com.exercisenow.enterprise.service.ExerciseService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/exercise")
 public class ExerciseController {
 
-    @RequestMapping("/")
-        public String index() {
-        User user = new User();
-        return "start";
+    @Autowired
+    private ExerciseService exerciseService;
+
+    // Add a new exercise
+    @PostMapping
+    public ResponseEntity<String> addExercise(@RequestBody Exercise exercise) {
+        exerciseService.saveExercise(exercise);
+        return ResponseEntity.ok("Exercise added successfully. Navigate to /api/exercise to view all exercises.");
     }
 
-    @GetMapping("/user/{id}/")
-    public ResponseEntity fetchUserByUserId(@PathVariable("userId") String id) {
-        return new ResponseEntity(HttpStatus.OK);
+    // Get all exercises
+    @GetMapping
+    public ResponseEntity<List<Exercise>> getAllExercises() {
+        List<Exercise> exercises = exerciseService.getAllExercises();
+        return ResponseEntity.ok(exercises);
     }
 
-    @PostMapping(value="/user/{id}", consumes="application/json", produces="application/json")
-    public User createUser(@RequestBody User user){
-        return user;
+    // Get exercise by ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Exercise> getExerciseById(@PathVariable int id) {
+        Exercise exercise = exerciseService.getExerciseById(id);
+        return ResponseEntity.ok(exercise);
     }
 
+    // Delete an exercise
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteExercise(@PathVariable int id) {
+        exerciseService.deleteExercise(id);
+        return ResponseEntity.ok("Exercise deleted successfully. Navigate to /api/exercise to view remaining exercises.");
+    }
+
+    // Navigation to add exercise page
     @GetMapping("/add")
-    public String addExerciseForm(Model model) {
-        model.addAttribute("exercise", new Exercise());
-        return "addexercise";
+    public ResponseEntity<String> addExercisePage() {
+        return ResponseEntity.ok("Navigate to /api/exercise/add (Frontend page not implemented).");
     }
-    @DeleteMapping("/user/{id}/")
-    public ResponseEntity deleteUser(@PathVariable("id") String id){
-        return new ResponseEntity(HttpStatus.OK);
-    }
-
-
 }
-
-

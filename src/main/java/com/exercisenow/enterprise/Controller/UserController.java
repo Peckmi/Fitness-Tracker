@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import java.util.Optional;
 
 @Controller
 @RequestMapping("/user")
@@ -15,43 +14,41 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    // Display the form for adding a new user
+    // Display user profile
+    @GetMapping("/details")
+    public String userDetails(Model model) {
+        User user = userService.getSingleUser(); // Fetch the signed-up user's details
+        if (user == null) {
+            // Redirect to the sign-up page if no user exists
+            return "redirect:/user/profile";
+        }
+        model.addAttribute("user", user);
+        return "user-details";
+    }
+
+    // Display profile form for creating/updating user
     @GetMapping("/profile")
     public String userProfileForm(Model model) {
         model.addAttribute("user", new User());
         return "profile";
     }
 
+    // Save or update user
     @PostMapping("/save")
     public String saveUser(@ModelAttribute("user") User user, Model model) {
         try {
             userService.saveUser(user);
-            return "redirect:/user/list";
+            return "redirect:/user/details";
         } catch (Exception e) {
             model.addAttribute("error", "Failed to save user: " + e.getMessage());
             return "profile";
         }
     }
 
-    // Edit user details
-    @GetMapping("/edit/{id}")
-    public String editUser(@PathVariable("id") int id, Model model) {
-        Optional<User> user = userService.getUserById(id);
-        if (user.isPresent()) {
-            model.addAttribute("user", user.get());
-            return "profile"; // Use the same form for editing
-        } else {
-            return "redirect:/user/{id}";
-        }
-    }
 
-    // Delete a user
-    @GetMapping("/delete/{id}")
-    public String deleteUser(@PathVariable("id") int id) {
-        userService.deleteUser(id);
-        return "redirect:/profile";
+    @GetMapping("/delete")
+    public String deleteUser() {
+        userService.deleteUser();
+        return "redirect:/user/profile";
     }
 }
-
-
-

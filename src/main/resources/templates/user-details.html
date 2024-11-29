@@ -73,36 +73,22 @@
                 <i class="lni lni-menu-cheesburger"></i>
             </button>
         </nav>
-
         <main class="p-3">
-            <h1>Create Workout</h1>
-        </main>
-        <form action="#" th:action="@{/workouts}" th:object="${workout}" method="post">
-
-            <div class="form-group">
-            <label for="type">Type:</label>
-            <input type="text" name="type" id="type" class="form-control" required/><br/>
-
-            <label for="duration">Duration (mins):</label>
-            <input type="number" name="duration" id="duration" class="form-control" required/><br/>
-
-            <label for="intensity">Intensity:</label>
-            <input type="text" name="intensity" id="intensity" class="form-control" required/><br/>
-
-            <label for="caloriesBurned">Calories Burned:</label>
-            <input type="number" name="caloriesBurned" id="caloriesBurned" class="form-control" required/><br/>
-
-            <label for="weekday">Weekday:</label>
-            <input type="text" name="weekday" id="weekday" class="form-control" required/><br/>
-
-            <label for="date">Date:</label>
-            <input type="date" name="date" id="date" class="form-control" required/><br/>
-
-            <button type="submit">Submit</button>
-        </div>
-    </form>
-
-    </div>
+<div>
+    <p><strong>ID:</strong> <span th:text="${user.userID}"></span></p>
+    <p><strong>Name:</strong> <span th:text="${user.name}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+    <p><strong>Age:</strong> <span th:text="${user.age}"></span></p>
+    <p><strong>Weight:</strong> <span th:text="${user.weight}"></span></p>
+    <p><strong>Height:</strong> <span th:text="${user.height}"></span></p>
 </div>
+<button>
+    <a th:href="@{/user/profile}" style="text-decoration: none; color: black;">Edit Profile</a>
+</button>
+<button>
+    <a th:href="@{/user/delete}" style="text-decoration: none; color: black;">Delete User</a>
+</button>
+        </main>
+    </div>
 </body>
 </html>

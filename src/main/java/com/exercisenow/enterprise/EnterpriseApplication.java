@@ -2,10 +2,9 @@ package com.exercisenow.enterprise;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 
-@SpringBootApplication
-@ComponentScan("com.exercisenow.enterprise.Controller")
+@SpringBootApplication(exclude = HibernateJpaAutoConfiguration.class)
 public class EnterpriseApplication {
 
 	public static void main(String[] args) {

@@ -1,11 +1,14 @@
 package com.exercisenow.enterprise.dao;
 
+import org.springframework.context.annotation.Bean;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
 public class DataConnection {
+    @Bean
     public static void main(String[] args) {
         
         String url = "jdbc:mysql://localhost:3306/fitnesstracker";
@@ -18,6 +21,8 @@ public class DataConnection {
             System.out.println("An error occurred. Could not connect to the database");
             e.printStackTrace();
         }
+
+
     }
 }
     
