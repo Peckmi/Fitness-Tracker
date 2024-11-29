@@ -33,9 +33,9 @@ public class WorkoutRepository {
             return ps;
         });
 
-        // Fetch the generated ID to return the saved object
+
         return getAllWorkouts().stream()
-                .reduce((first, second) -> second) // Get the last added workout
+                .reduce((first, second) -> second)
                 .orElse(null);
     }
 

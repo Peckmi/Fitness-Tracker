@@ -11,17 +11,14 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    // Save or update user
     public void saveUser(User user) {
         userRepository.saveUser(user);
     }
 
-    // Fetch the signed-up user's details
     public User getSingleUser() {
         return userRepository.findSingleUser();
     }
 
-    // Delete user
     public void deleteUser() {
         userRepository.deleteUser();
     }

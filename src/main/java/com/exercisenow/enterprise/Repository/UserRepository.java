@@ -23,19 +23,17 @@ public class UserRepository {
                 user.getPassword(), user.getAge(), user.getWeight(), user.getHeight());
     }
 
-    // Fetch the signed-up user's details
     public User findSingleUser() {
         String sql = "SELECT * FROM users LIMIT 1"; // Fetch only one user
         return jdbcTemplate.queryForObject(sql, new UserRowMapper());
     }
 
-    // Delete user
     public void deleteUser() {
         String sql = "DELETE FROM users";
         jdbcTemplate.update(sql);
     }
 
-    // RowMapper for User
+
     private static class UserRowMapper implements RowMapper<User> {
         @Override
         public User mapRow(ResultSet rs, int rowNum) throws SQLException {
