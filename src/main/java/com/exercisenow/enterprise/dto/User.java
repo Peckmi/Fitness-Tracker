@@ -1,22 +1,43 @@
 package com.exercisenow.enterprise.dto;
-
 import lombok.Data;
 
 import java.util.List;
 
-public @Data
-class User {
+@Data
+
+public class User {
+
+
     private int userID;
+
+
     private String username;
+
+
     private String email;
+
+
     private String password;
+
+
     private int age;
+
+
     private double weight;
+
+
     private double height;
+
     private List<WeeklyGoal> weeklyGoals;
+
     private WorkoutRegimen currentRegimen;
+
     private List<Reward> rewards;
+
+
     private int currentWeek;
+
+
 
     public void viewProgress() {
         weeklyGoals.get(currentWeek).checkGoalCompletion();

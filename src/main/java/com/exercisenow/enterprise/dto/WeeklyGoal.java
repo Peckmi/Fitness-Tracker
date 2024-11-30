@@ -1,22 +1,35 @@
 package com.exercisenow.enterprise.dto;
 
+
 import lombok.Data;
 
 import java.util.List;
 
-public @Data
-class WeeklyGoal {
+ @Data
+public class WeeklyGoal {
+
     private int goalID;
+
     private int userID;
+
     private double targetCalories;
+
     private int targetWorkouts;
+
     private double targetDuration;
+
     private double totalCalories;
+
     private int totalWorkouts;
+
     private double totalDuration;
+
     private double caloriePercentage;
+
     private int workoutPercentage;
+
     private double durationPercentage;
+
     private List<Workout> currentWorkouts;
 
     public void updateProgress(double calories, int workouts, double duration) {
