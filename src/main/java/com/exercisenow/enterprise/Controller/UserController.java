@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -14,7 +15,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
+    // Endpoint to view user details
     @GetMapping("/details")
     public String userDetails(Model model) {
         User user = userService.getSingleUser();
@@ -25,13 +26,14 @@ public class UserController {
         return "user-details";
     }
 
+
     @GetMapping("/profile")
     public String userProfileForm(Model model) {
         model.addAttribute("user", new User());
         return "profile";
     }
 
-
+    // Endpoint to save user profile data
     @PostMapping("/save")
     public String saveUser(@ModelAttribute("user") User user, Model model) {
         try {
@@ -43,9 +45,11 @@ public class UserController {
         }
     }
 
+
     @GetMapping("/delete")
     public String deleteUser() {
         userService.deleteUser();
-        return "redirect:/user/profile";
+        return "redirect:/user/profile"; 
     }
 }
+

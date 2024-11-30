@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+
 @Controller
 @RequestMapping("/workouts")
 public class WorkoutController {
@@ -22,7 +24,6 @@ public class WorkoutController {
         return "workouts";
     }
 
-
     @GetMapping("/{id}")
     public String getWorkoutById(@PathVariable int id, Model model) {
         Workout workout = workoutService.getWorkoutById(id);
@@ -30,13 +31,11 @@ public class WorkoutController {
         return "workoutDetails";
     }
 
-
     @PostMapping
     public String createWorkout(@ModelAttribute Workout workout) {
         workoutService.createWorkout(workout);
         return "redirect:/workouts";
     }
-
 
     @DeleteMapping("/{id}")
     public String deleteWorkout(@PathVariable int id) {

@@ -74,20 +74,55 @@
             </button>
         </nav>
         <main class="p-3">
-<div>
-    <p><strong>ID:</strong> <span th:text="${user.userID}"></span></p>
-    <p><strong>Name:</strong> <span th:text="${user.name}"></span></p>
-    <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
-    <p><strong>Age:</strong> <span th:text="${user.age}"></span></p>
-    <p><strong>Weight:</strong> <span th:text="${user.weight}"></span></p>
-    <p><strong>Height:</strong> <span th:text="${user.height}"></span></p>
-</div>
-<button>
-    <a th:href="@{/user/profile}" style="text-decoration: none; color: black;">Edit Profile</a>
-</button>
-<button>
-    <a th:href="@{/user/delete}" style="text-decoration: none; color: black;">Delete User</a>
-</button>
+            <h1>User Profile</h1>
+
+            <!-- Table to display user details -->
+            <div th:if="${user != null}">
+                <table>
+                    <tr>
+                        <td><strong>ID:</strong></td>
+                        <td><span th:text="${user.userID}"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Name:</strong></td>
+                        <td><span th:text="${user.name}"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email:</strong></td>
+                        <td><span th:text="${user.email}"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Age:</strong></td>
+                        <td><span th:text="${user.age}"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Weight:</strong></td>
+                        <td><span th:text="${user.weight}"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Height:</strong></td>
+                        <td><span th:text="${user.height}"></span></td>
+                    </tr>
+                </table>
+                <br>
+
+                <!-- If user exists, show Edit Profile and Delete User buttons -->
+                <div>
+                    <button type="submit">
+                        <a th:href="@{/user/profile}" style="text-decoration: none; color: black;">Edit Profile</a>
+                    </button>
+                    <button>
+                        <a th:href="@{/user/delete}" style="text-decoration: none; color: black;">Delete User</a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- If no user is logged in, show Sign Up link -->
+            <div th:if="${user == null}">
+                <button type="button">
+                    <a th:href="@{/user/signup}" style="text-decoration: none; color: black;">Sign Up</a>
+                </button>
+            </div>
         </main>
     </div>
 </body>
