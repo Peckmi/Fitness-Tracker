@@ -15,5 +15,6 @@ public class Reward {
 
     private double requiredProgress;
 
+    // Function to decide whether or not the user is eligible for the reward
     public Boolean checkRewardEligibility(double progress) { return progress >= requiredProgress; }
 }
