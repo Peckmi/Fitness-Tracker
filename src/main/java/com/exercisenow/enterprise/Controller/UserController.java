@@ -26,7 +26,7 @@ public class UserController {
         return "user-details";
     }
 
-
+    // Endpoint to view user profile
     @GetMapping("/profile")
     public String userProfileForm(Model model) {
         model.addAttribute("user", new User());
@@ -45,7 +45,7 @@ public class UserController {
         }
     }
 
-
+    // Endpoint to delete a user
     @GetMapping("/delete")
     public String deleteUser() {
         userService.deleteUser();
