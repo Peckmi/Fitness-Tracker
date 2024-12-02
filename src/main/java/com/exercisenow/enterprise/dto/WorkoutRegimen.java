@@ -1,10 +1,7 @@
 package com.exercisenow.enterprise.dto;
 
-
 import lombok.Data;
-
 import java.util.List;
-
 
 @Data
 public class WorkoutRegimen {
@@ -18,10 +15,12 @@ public class WorkoutRegimen {
 
     private String notes;
 
+    // Add workout to regimen
     public void addWorkout(Workout workout) {
         workouts.add(workout);
     }
 
+    // Remove workout from regimen
     public void removeWorkout(Workout workout) {
         workouts.remove(workout);
     }
